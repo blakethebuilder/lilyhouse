@@ -25,12 +25,14 @@ const {
     :root {
       --primary: #00729A;
       --accent: #009A4C;
-      --card-bg: #F3EEE8;
-      --bg-warm: #FAF6F1;
-      --text: #1A1A1A;
-      --text-secondary: #6B6B6B;
+      --card-bg: #FFFFFF;
+      --border: #E5E7EB;
+      --text: #1F2937;
+      --text-secondary: #6B7280;
       --white: #FFFFFF;
       --radius: 1rem;
+      --shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+      --shadow-lg: 0 10px 25px rgba(0,0,0,0.08);
     }
 
     *, *::before, *::after {
@@ -46,9 +48,9 @@ const {
     body {
       font-family: 'Raleway', sans-serif;
       color: var(--text);
-      background: var(--bg-warm);
-      line-height: 1.7;
-      font-size: 1.125rem;
+      background: var(--white);
+      line-height: 1.6;
+      font-size: 1rem;
     }
 
     a {
@@ -152,7 +154,7 @@ const {
       font-size: 0.9rem;
     }
     .nav .dropdown-menu a:hover {
-      background: var(--card-bg);
+      background: #F3F4F6;
     }
 
     .header-actions {
@@ -273,26 +275,21 @@ const {
       margin-bottom: 3rem;
     }
     .section-alt {
-      background: var(--card-bg) !important;
-    }
-
-    .section-warm {
-      background: var(--bg-warm);
-    }
-    .section-alt {
-      background: var(--white);
+      background: #F8FAFB;
     }
 
     .card {
       background: var(--card-bg);
       border-radius: var(--radius);
       padding: 1.5rem;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
       transition: transform 0.3s, box-shadow 0.3s;
       overflow: hidden;
     }
     .card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 12px 32px rgba(0,0,0,0.1);
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
     }
     .card h3 {
       margin-bottom: 0.75rem;
@@ -325,7 +322,7 @@ const {
     .hero-overlay {
       position: absolute;
       inset: 0;
-      background: rgba(0,0,0,0.5);
+      background: linear-gradient(135deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 100%);
       z-index: 1;
     }
     .hero-content {
@@ -398,14 +395,15 @@ const {
     /* Blog cards */
     .blog-card {
       background: var(--white);
-      border: 1px solid var(--card-bg);
+      border: 1px solid var(--border);
       border-radius: var(--radius);
       padding: 1.5rem;
+      box-shadow: var(--shadow);
       transition: transform 0.3s, box-shadow 0.3s;
     }
     .blog-card:hover {
       transform: translateY(-3px);
-      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+      box-shadow: var(--shadow-lg);
     }
     .blog-card .date {
       font-size: 0.85rem;
@@ -430,9 +428,10 @@ const {
     /* Contact campus cards */
     .campus-card {
       background: var(--white);
-      border: 1px solid var(--card-bg);
+      border: 1px solid var(--border);
       border-radius: var(--radius);
       padding: 1.5rem;
+      box-shadow: var(--shadow);
     }
     .campus-card h3 {
       margin-bottom: 0.75rem;
@@ -461,7 +460,7 @@ const {
     .form-group textarea {
       width: 100%;
       padding: 0.75rem 1rem;
-      border: 2px solid var(--card-bg);
+      border: 2px solid var(--border);
       border-radius: var(--radius);
       font-family: 'Raleway', sans-serif;
       font-size: 0.95rem;
@@ -503,7 +502,7 @@ const {
     .fee-table th, .fee-table td {
       padding: 0.75rem 1rem;
       text-align: left;
-      border-bottom: 1px solid var(--card-bg);
+      border-bottom: 1px solid var(--border);
     }
     .fee-table th {
       background: var(--primary);
@@ -558,10 +557,12 @@ const {
       }
     }
     .pillar-card {
-      background: var(--card-bg);
+      background: var(--white);
       border-radius: var(--radius);
       padding: 2rem 1.5rem;
       text-align: center;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
     }
     .pillar-icon {
       font-size: 2.5rem;

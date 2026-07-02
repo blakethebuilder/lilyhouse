@@ -1,0 +1,110 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const posts = [
+  {
+    title: 'Montessori School Melkbos: What Makes Lily House Unique on the West Coast',
+    date: 'April 28, 2026',
+    excerpt: 'Comparing schools in Melkbosstrand? Read about our private Montessori school in Melkbos, offering pre-primary and primary education on the beautiful West Coast.',
+    image: 'https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=800&q=80',
+    slug: 'montessori-melkbos-unique',
+  },
+  {
+    title: 'Why Lily House Is the Leading Montessori School in Durbanville',
+    date: 'April 13, 2026',
+    excerpt: 'A look inside our farm-based Montessori campus in Durbanville. Read about our daily routines, our natural environment, and how we nurture independent learners.',
+    image: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&q=80',
+    slug: 'leading-montessori-durbanville',
+  },
+];
+---
+
+<Layout title="Blog — Lily House Montessori Schools" description="Stories, updates, and Montessori insights from our classrooms across Claremont, Durbanville, and Melkbos.">
+  <section class="page-hero">
+    <div class="container">
+      <h1>From the Lily House Community</h1>
+      <p class="subtitle">Stories, updates, and Montessori insights from our classrooms to your home.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="blog-grid">
+        {posts.map((post) => (
+          <article class="blog-card">
+            <img src={post.image} alt={post.title} loading="lazy" />
+            <div class="blog-card-body">
+              <time datetime={post.date}>{post.date}</time>
+              <h3><a href={`/blog/${post.slug}`}>{post.title}</a></h3>
+              <p>{post.excerpt}</p>
+              <a href={`/blog/${post.slug}`} class="read-more">Read More »</a>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .blog-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  .blog-card {
+    background: var(--card-bg);
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .blog-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  }
+  .blog-card img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    display: block;
+  }
+  .blog-card-body {
+    padding: 1.5rem;
+  }
+  .blog-card-body time {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+  }
+  .blog-card-body h3 {
+    margin: 0.5rem 0;
+    font-size: 1.25rem;
+  }
+  .blog-card-body h3 a {
+    color: var(--primary);
+    text-decoration: none;
+  }
+  .blog-card-body h3 a:hover {
+    text-decoration: underline;
+  }
+  .blog-card-body p {
+    color: var(--text);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0.5rem 0;
+  }
+  .read-more {
+    color: var(--accent);
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 0.5rem;
+  }
+  .read-more:hover {
+    text-decoration: underline;
+  }
+  @media (max-width: 768px) {
+    .blog-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

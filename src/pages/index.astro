@@ -7,7 +7,7 @@ import Layout from '../layouts/Layout.astro';
   <section class="hero">
     <img
       class="hero-bg"
-      src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=1200&q=75"
+      src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=1500&q=80"
       alt="Montessori classroom"
       loading="eager"
     />
@@ -20,7 +20,7 @@ import Layout from '../layouts/Layout.astro';
       </p>
       <div class="hero-actions">
         <a href="/contact" class="btn btn-accent btn-lg">Book a Tour</a>
-        <a href="/admissions" class="btn btn-primary btn-lg">Enroll Now</a>
+        <a href="/admissions" class="btn btn-outline btn-lg" style="color:white;border-color:rgba(255,255,255,0.7);">Enroll Now →</a>
       </div>
     </div>
   </section>
@@ -29,6 +29,7 @@ import Layout from '../layouts/Layout.astro';
   <section class="section" id="campuses">
     <div class="container">
       <div class="section-header">
+        <div class="section-ornament"></div>
         <span class="section-tag">Our Campuses</span>
         <h2 class="section-title">Find Your Campus</h2>
         <p class="section-desc">Three unique locations, one Montessori philosophy. Visit the campus that feels like home.</p>
@@ -39,9 +40,9 @@ import Layout from '../layouts/Layout.astro';
             <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=600&q=80" alt="Claremont Campus" loading="lazy" />
           </div>
           <div class="campus-info">
-            <h3>Claremont</h3>
+            <span class="campus-location">Claremont</span>
             <p>Queen Victoria Road — our original campus in the leafy Southern Suburbs</p>
-            <span class="campus-link">Explore Claremont →</span>
+            <span class="campus-link">Explore Claremont <span class="arrow">→</span></span>
           </div>
         </a>
         <a href="/contact#durbanville" class="campus-card-featured">
@@ -49,9 +50,9 @@ import Layout from '../layouts/Layout.astro';
             <img src="https://images.unsplash.com/photo-1571260899304-425eee4c7efc?w=600&q=80" alt="Durbanville Campus" loading="lazy" />
           </div>
           <div class="campus-info">
-            <h3>Durbanville</h3>
+            <span class="campus-location">Durbanville</span>
             <p>Hooggelegen Road — farm-based learning in the Durbanville valley</p>
-            <span class="campus-link">Explore Durbanville →</span>
+            <span class="campus-link">Explore Durbanville <span class="arrow">→</span></span>
           </div>
         </a>
         <a href="/contact#melkbos" class="campus-card-featured">
@@ -59,9 +60,9 @@ import Layout from '../layouts/Layout.astro';
             <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=600&q=80" alt="Melkbos Campus" loading="lazy" />
           </div>
           <div class="campus-info">
-            <h3>Melkbos</h3>
+            <span class="campus-location">Melkbos</span>
             <p>Charles Hoffe Avenue — coastal Montessori on the West Coast</p>
-            <span class="campus-link">Explore Melkbos →</span>
+            <span class="campus-link">Explore Melkbos <span class="arrow">→</span></span>
           </div>
         </a>
       </div>
@@ -69,46 +70,55 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <!-- Philosophy Section -->
-  <section class="section section-alt">
+  <section class="section philosophy-section">
     <div class="container">
       <div class="split-grid">
         <div class="split-content">
+          <div class="section-ornament"></div>
           <span class="section-tag">Our Philosophy</span>
-          <h2 class="section-title" style="text-align:left;">A foundation for lifelong learning</h2>
+          <h2 class="section-title" style="text-align:left;">A foundation for<br />lifelong learning</h2>
           <p>At Lily House, we believe every child is naturally curious and capable. Our Montessori approach nurtures independence, builds confidence, and empowers children to become capable learners prepared for life.</p>
-          <a href="/about" class="btn btn-primary" style="margin-top:1.5rem;">Learn More About Us</a>
+          <a href="/about" class="btn btn-primary mt-2">Learn More About Us →</a>
         </div>
         <div class="split-visual">
-          <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?w=600&q=75" alt="Montessori classroom" loading="lazy" />
+          <div class="split-image-frame">
+            <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?w=700&q=80" alt="Montessori classroom" loading="lazy" />
+            <div class="image-accent"></div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Blog Preview -->
-  <section class="section">
+  <section class="section section-alt">
     <div class="container">
       <div class="section-header">
+        <div class="section-ornament"></div>
         <span class="section-tag">From Our Community</span>
         <h2 class="section-title">Latest Updates</h2>
       </div>
-      <div class="grid-2">
+      <div class="blog-home-grid">
         <article class="blog-card-featured">
-          <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=600&q=80" alt="Montessori at home" loading="lazy" />
+          <div class="blog-feat-image">
+            <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=700&q=80" alt="Montessori at home" loading="lazy" />
+          </div>
           <div class="blog-card-body">
             <time>15 June 2026</time>
             <h3>Montessori at Home: Creating a Prepared Environment</h3>
             <p>Simple ways to extend the Montessori philosophy into your home environment.</p>
-            <a href="/blog/post-1" class="read-more">Read More →</a>
+            <a href="/blog/post-1" class="read-more">Read More <span class="arrow">→</span></a>
           </div>
         </article>
         <article class="blog-card-featured">
-          <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&q=80" alt="Practical life skills" loading="lazy" />
+          <div class="blog-feat-image">
+            <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=700&q=80" alt="Practical life skills" loading="lazy" />
+          </div>
           <div class="blog-card-body">
             <time>2 June 2026</time>
             <h3>Why Practical Life Skills Matter</h3>
             <p>How everyday activities build fine motor skills, concentration, and confidence.</p>
-            <a href="/blog/post-2" class="read-more">Read More →</a>
+            <a href="/blog/post-2" class="read-more">Read More <span class="arrow">→</span></a>
           </div>
         </article>
       </div>
@@ -116,7 +126,7 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <!-- CTA Banner -->
-  <section class="section section-alt">
+  <section class="section">
     <div class="container">
       <div class="cta-banner">
         <h2>Start Your Child's Adventure</h2>
@@ -134,24 +144,21 @@ import Layout from '../layouts/Layout.astro';
     max-width: 640px;
     margin: 0 auto 3rem;
   }
+  .section-ornament {
+    width: 40px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary), var(--accent));
+    border-radius: 2px;
+    margin: 0 auto 1rem;
+  }
   .section-tag {
     display: inline-block;
-    font-size: 0.8rem;
-    font-weight: 600;
+    font-size: 0.75rem;
+    font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.12em;
+    letter-spacing: 0.15em;
     color: var(--primary);
     margin-bottom: 0.75rem;
-    position: relative;
-  }
-  .section-tag::before {
-    content: '';
-    display: block;
-    width: 24px;
-    height: 3px;
-    background: var(--primary);
-    border-radius: 2px;
-    margin: 0 auto 0.75rem;
   }
   .section-desc {
     color: var(--text-secondary);
@@ -165,15 +172,17 @@ import Layout from '../layouts/Layout.astro';
   /* Hero badge */
   .hero-badge {
     display: inline-block;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    background: rgba(255,255,255,0.2);
-    backdrop-filter: blur(4px);
-    padding: 0.4rem 1rem;
-    border-radius: 2rem;
-    margin-bottom: 1rem;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding: 0.4rem 1.1rem;
+    border-radius: 50px;
+    margin-bottom: 1.25rem;
+    border: 1px solid rgba(255,255,255,0.1);
   }
   .hero-badge::before {
     content: '';
@@ -184,13 +193,6 @@ import Layout from '../layouts/Layout.astro';
     border-radius: 50%;
     margin-right: 0.5rem;
     vertical-align: middle;
-  }
-  .hero h1 {
-    font-size: 3rem;
-  }
-  .btn-lg {
-    padding: 0.85rem 2.2rem;
-    font-size: 1rem;
   }
 
   /* Campus cards */
@@ -207,47 +209,61 @@ import Layout from '../layouts/Layout.astro';
   .campus-card-featured {
     display: flex;
     flex-direction: column;
-    border-radius: var(--radius);
+    border-radius: var(--radius-lg);
     overflow: hidden;
     background: var(--white);
-    border: 1px solid var(--border);
-    box-shadow: var(--shadow);
-    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid var(--border-light);
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     text-decoration: none;
     color: inherit;
+    position: relative;
   }
   .campus-card-featured:hover {
-    transform: translateY(-6px);
-    box-shadow: var(--shadow-lg);
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
   }
   .campus-image {
-    height: 220px;
+    height: 240px;
     overflow: hidden;
+    position: relative;
+  }
+  .campus-image::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60%;
+    background: linear-gradient(to top, rgba(0,0,0,0.4), transparent);
+    pointer-events: none;
   }
   .campus-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.5s;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   }
   .campus-card-featured:hover .campus-image img {
-    transform: scale(1.05);
+    transform: scale(1.08);
   }
   .campus-info {
-    padding: 1.5rem;
+    padding: 1.5rem 1.75rem 1.75rem;
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 0.4rem;
+    gap: 0.5rem;
   }
-  .campus-info h3 {
-    font-size: 1.25rem;
-    margin: 0;
+  .campus-location {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--primary-dark);
+    letter-spacing: -0.01em;
   }
   .campus-info p {
     color: var(--text-secondary);
     font-size: 0.9rem;
-    line-height: 1.5;
+    line-height: 1.6;
     flex: 1;
   }
   .campus-link {
@@ -255,9 +271,22 @@ import Layout from '../layouts/Layout.astro';
     font-weight: 600;
     font-size: 0.9rem;
     margin-top: 0.5rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    transition: gap 0.3s;
+  }
+  .campus-card-featured:hover .campus-link {
+    gap: 0.5rem;
+  }
+  .campus-link .arrow {
+    transition: transform 0.3s;
+  }
+  .campus-card-featured:hover .campus-link .arrow {
+    transform: translateX(4px);
   }
 
-  /* Split layout */
+  /* Split layout (philosophy) */
   .split-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -267,59 +296,134 @@ import Layout from '../layouts/Layout.astro';
   @media (min-width: 768px) {
     .split-grid {
       grid-template-columns: 1fr 1fr;
+      gap: 4rem;
     }
   }
   .split-content p {
     color: var(--text-secondary);
     font-size: 1.1rem;
-    line-height: 1.7;
-    margin-top: 1rem;
+    line-height: 1.8;
+    margin-top: 0.5rem;
   }
-  .split-visual img {
+  .split-content .section-ornament {
+    margin: 0 0 1rem;
+  }
+  .split-visual {
+    position: relative;
+  }
+  .split-image-frame {
+    position: relative;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-xl);
+  }
+  .split-image-frame img {
     width: 100%;
-    border-radius: var(--radius);
-    box-shadow: var(--shadow-lg);
+    display: block;
+  }
+  .image-accent {
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    width: 80px;
+    height: 80px;
+    border: 3px solid var(--accent);
+    border-radius: 50%;
+    opacity: 0.3;
+    pointer-events: none;
   }
 
-  /* Blog cards */
+  /* Philosophy section background */
+  .philosophy-section {
+    background: var(--white);
+    position: relative;
+  }
+  .philosophy-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border), transparent);
+  }
+
+  /* Blog home cards */
+  .blog-home-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  @media (min-width: 768px) {
+    .blog-home-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
   .blog-card-featured {
-    border-radius: var(--radius);
+    border-radius: var(--radius-lg);
     overflow: hidden;
     background: var(--white);
-    border: 1px solid var(--border);
-    box-shadow: var(--shadow);
-    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid var(--border-light);
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   }
   .blog-card-featured:hover {
-    transform: translateY(-4px);
+    transform: translateY(-6px);
     box-shadow: var(--shadow-lg);
   }
-  .blog-card-featured img {
+  .blog-feat-image {
+    height: 210px;
+    overflow: hidden;
+  }
+  .blog-feat-image img {
     width: 100%;
-    height: 200px;
+    height: 100%;
     object-fit: cover;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .blog-card-featured:hover .blog-feat-image img {
+    transform: scale(1.05);
   }
   .blog-card-body {
     padding: 1.5rem;
   }
   .blog-card-body time {
-    font-size: 0.85rem;
-    color: var(--text-secondary);
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 500;
   }
   .blog-card-body h3 {
     font-size: 1.15rem;
-    margin: 0.5rem 0;
+    margin: 0.6rem 0;
+    color: var(--text);
+    line-height: 1.4;
   }
   .blog-card-body p {
     color: var(--text-secondary);
     font-size: 0.9rem;
-    line-height: 1.6;
+    line-height: 1.7;
   }
   .read-more {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
     margin-top: 0.75rem;
     font-weight: 600;
+    font-size: 0.9rem;
     color: var(--primary);
+    text-decoration: none;
+    transition: gap 0.3s;
+  }
+  .read-more:hover {
+    gap: 0.6rem;
+  }
+  .read-more .arrow {
+    transition: transform 0.3s;
+  }
+  .read-more:hover .arrow {
+    transform: translateX(4px);
   }
 
   /* Mobile */
@@ -335,10 +439,13 @@ import Layout from '../layouts/Layout.astro';
       font-size: 0.9rem;
     }
     .campus-image {
-      height: 180px;
+      height: 200px;
     }
     .split-grid {
       gap: 2rem;
+    }
+    .split-content .section-title {
+      font-size: 1.6rem !important;
     }
   }
 </style>

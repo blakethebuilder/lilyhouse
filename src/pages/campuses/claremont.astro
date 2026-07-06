@@ -2,7 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 
 const team = [
-  { name:'Qaanita Hendricks', role:'Campus lead and toddler guide', img:'https://i0.wp.com/lilyhouseschool.co.za/wp-content/uploads/2025/11/Claremont-Campus-Lead-and-Toddler-Directress-Qaanita-Hendricks.jpg?fit=400%2C534&ssl=1' },
+  { name:'Qaanita Hendricks', role:'Campus lead and toddler guide', img:'https://i0.wp.com/lilyhouseschool.co.za/wp-content/uploads/2025/11/Claremont-Campus-Lead-and-Toddler-Directress-Qaanita-Hendricks.jpg?fit=400%2C534&ssl=1', email:'qaanita@lilyhouseschool.co.za' },
   { name:'Gracia Kabambi', role:'Toddler assistant', img:'https://i0.wp.com/lilyhouseschool.co.za/wp-content/uploads/2025/11/Claremont-Toddler-Assistant-Gracia-Kabambi.jpg?fit=400%2C534&ssl=1' },
   { name:'Saahira Smith', role:'Preschool guide', img:'' },
   { name:'Trust Obinna', role:'Preschool assistant', img:'' },
@@ -60,11 +60,12 @@ const values = [
       <p class="text-center" style="color:var(--text-light);margin-bottom:2rem;">Meet the passionate educators who provide personalised attention and build deep connections in our intimate, small-class setting.</p>
       <div class="team-grid">
         {team.map(m => (
-          <div class="team-card">
+          <div class={'team-card' + (m.email ? ' team-lead' : '')}>
             {m.img ? <img src={m.img} alt={m.name} loading="lazy" /> : <div class="team-placeholder">{m.name.split(' ').map(n => n[0]).join('')}</div>}
             <div class="team-body">
               <h3>{m.name}</h3>
               <p>{m.role}</p>
+              {m.email && <p class="team-email"><a href={'mailto:' + m.email}>{m.email}</a></p>}
             </div>
           </div>
         ))}

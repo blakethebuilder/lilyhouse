@@ -1,7 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 const team = [
-  { name:'Jess Hanafey', role:'Campus Lead and 6-9 Guide', img:'https://i0.wp.com/lilyhouseschool.co.za/wp-content/uploads/2025/11/Jess-Hanafey-Principal-6-9-Educator-Creative-Communications-Lead.jpg?fit=400%2C534&ssl=1' },
+  { name:'Jess Hanafey', role:'Campus Lead and 6-9 Guide', img:'https://i0.wp.com/lilyhouseschool.co.za/wp-content/uploads/2025/11/Jess-Hanafey-Principal-6-9-Educator-Creative-Communications-Lead.jpg?fit=400%2C534&ssl=1', email:'jess@lilyhouseschool.co.za' },
   { name:'Nqobile Sihlayi', role:'18 months – 3 years Educator', img:'https://i0.wp.com/lilyhouseschool.co.za/wp-content/uploads/2025/11/Nqobile-Sihlayi-18-months-to-3-years-Educator-.jpg?fit=400%2C534&ssl=1' },
   { name:'Jenine Jonkerman', role:'3-6 Educator', img:'https://i0.wp.com/lilyhouseschool.co.za/wp-content/uploads/2025/11/Jenine-Jonkerman-3-6-Educator-1.jpg?fit=400%2C534&ssl=1' },
   { name:'Elisa Da Silva', role:'3-6 Educator', img:'https://i0.wp.com/lilyhouseschool.co.za/wp-content/uploads/2025/11/Elisa-Da-Silva-3-6-Educator-1.jpg?fit=400%2C534&ssl=1' },
@@ -55,9 +55,9 @@ const values = [
       <p class="text-center" style="color:var(--text-light);margin-bottom:2rem;">Our passionate educators are the heart of our nurturing seaside community, dedicated to guiding each child on their learning journey.</p>
       <div class="team-grid">
         {team.map(m => (
-          <div class="team-card">
+          <div class={'team-card' + (m.email ? ' team-lead' : '')}>
             {m.img ? <img src={m.img} alt={m.name} loading="lazy" /> : <div class="team-placeholder">{m.name.split(' ').map(n => n[0]).join('')}</div>}
-            <div class="team-body"><h3>{m.name}</h3><p>{m.role}</p></div>
+            <div class="team-body"><h3>{m.name}</h3><p>{m.role}</p>{m.email && <p class="team-email"><a href={'mailto:' + m.email}>{m.email}</a></p>}</div>
           </div>
         ))}
       </div>

@@ -342,6 +342,22 @@ const {
     }
     @media (min-width: 768px) { .campus-row { grid-template-columns: repeat(3, 1fr); } }
 
+    /* === TEAM LEAD === */
+    .team-lead {
+      grid-column: 1 / -1;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      align-items: center;
+      background: var(--white);
+      border: 2px solid var(--teal);
+      border-radius: var(--radius);
+      padding: 1rem;
+    }
+    @media (min-width: 768px) { .team-lead { grid-template-columns: 1fr 1fr; } }
+    .team-email { margin-top: 0.5rem; }
+    .team-email a { color: var(--teal); font-weight: 600; }
+
     /* === ANIMATIONS === */
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(24px); }

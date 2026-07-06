@@ -1,0 +1,88 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+export async function getStaticPaths() {
+  return [
+    { params: { campus: 'claremont' }, props: {
+      name: 'Claremont', head: 'Qaanita Hendricks', email: 'qaanita@lilyhouseschool.co.za',
+      address: '80 Queen Victoria Road, Claremont',
+      tagline: 'Small class sizes and personalised attention in the heart of the leafy Southern Suburbs.',
+      desc: 'Our Claremont campus offers a calm, prepared Montessori environment in the Southern Suburbs. Children work independently and collaboratively with carefully designed materials that foster concentration, independence, and a love for learning.',
+      mapSrc: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3310.084306981048!2d18.4653!3d-33.9782!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcc5a0b1b1b1b1b%3A0x1b1b1b1b1b1b1b1b!2s80%20Queen%20Victoria%20Rd%2C%20Claremont%2C%20Cape%20Town!5e0!3m2!1sen!2sza!4v1',
+      img: 'https://i0.wp.com/lilyhouseschool.co.za/wp-content/uploads/2025/11/Jaxon_B_Candid-1.jpg?fit=800%2C534&ssl=1',
+      imgAlt: 'Children working at child-sized tables in a Montessori classroom at the Claremont campus',
+    }},
+    { params: { campus: 'durbanville' }, props: {
+      name: 'Durbanville', head: 'Tasneem Khan', email: 'tasneem@lilyhouseschool.co.za',
+      address: '16 Hooggelegen Road, Durbanville',
+      tagline: 'Education blossoms amidst the rolling vineyards and orchards of the Durbanville valley.',
+      desc: 'Set against the rolling vineyards and orchards of the Durbanville valley, our farm-based campus provides children with space to explore, grow, and learn in an environment that celebrates both nature and academic rigour.',
+      mapSrc: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3309.084306981048!2d18.6489!3d-33.8335!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcc5a0b1b1b1b1b%3A0x1b1b1b1b1b1b1b1b!2s16%20Hooggelegen%20Rd%2C%20Durbanville%2C%20Cape%20Town!5e0!3m2!1sen!2sza!4v1',
+      img: 'https://i0.wp.com/lilyhouseschool.co.za/wp-content/uploads/2025/02/Lily-House-52-scaled.jpg?fit=800%2C534&ssl=1',
+      imgAlt: 'A child\'s hands practicing with a Montessori button dressing frame at the Durbanville campus',
+    }},
+    { params: { campus: 'melkbos' }, props: {
+      name: 'Melkbos', head: 'Jess Hanafey', email: 'jess@lilyhouseschool.co.za',
+      address: '42 Charles Hoffe Avenue, Van Riebeekstrand',
+      tagline: 'Coastal charm meets Montessori excellence on the West Coast.',
+      desc: 'Nestled along the stunning West Coast, Lily House Melkbos offers a unique Montessori education that blends coastal charm with academic excellence. Under the leadership of Jess Hanafey, our Melkbos campus has become a beacon for families seeking an authentic Montessori experience.',
+      mapSrc: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3309.084306981048!2d18.4469!3d-33.7278!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcc5a0b1b1b1b1b%3A0x1b1b1b1b1b1b1b1b!2s42%20Charles%20Hoffe%20Ave%2C%20Van%20Riebeekstrand%2C%20Cape%20Town!5e0!3m2!1sen!2sza!4v1',
+      img: 'https://i0.wp.com/lilyhouseschool.co.za/wp-content/uploads/2025/11/Lily-House-14.jpg?fit=800%2C534&ssl=1',
+      imgAlt: 'Two Primary students working collaboratively with the Montessori Moveable Alphabet at the Melkbos campus',
+    }},
+  ];
+}
+const { name, head, email, address, tagline, desc, mapSrc, img, imgAlt } = Astro.props;
+const heroBg = 'https://i0.wp.com/lilyhouseschool.co.za/wp-content/uploads/2025/11/Lily-House-125-1-scaled.jpg?fit=800%2C534&ssl=1';
+---
+
+<Layout title={`${name} Campus — Lily House Montessori Schools`}>
+  <section class="page-hero">
+    <div class="container">
+      <h1>{name} Campus</h1>
+      <p class="subtitle">{tagline}</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="campus-layout">
+        <img src={img} alt={imgAlt} class="campus-feature-img" loading="eager" />
+        <div class="campus-info">
+          <h2>Welcome to Lily House {name}</h2>
+          <p>{desc}</p>
+          <div class="campus-contact">
+            <p><strong>Head of School:</strong> {head}</p>
+            <p><strong>Email:</strong> <a href={`mailto:${email}`}>{email}</a></p>
+            <p><strong>Address:</strong> {address}</p>
+          </div>
+          <div class="campus-ctas">
+            <a href="/admissions" class="btn btn-green">Enroll Now</a>
+            <a href="/contact" class="btn btn-teal">Book a Tour</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">Location</h2>
+      <div class="campus-map">
+        <iframe src={mapSrc} width="100%" height="400" style="border:0;border-radius:1rem;" loading="lazy" title={`${name} campus map`}></iframe>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .campus-layout { display:grid; grid-template-columns:1fr; gap:2rem; }
+  @media (min-width:768px) { .campus-layout { grid-template-columns:1fr 1fr; align-items:start; } }
+  .campus-feature-img { width:100%; border-radius:1rem; }
+  .campus-info h2 { font-size:1.8rem; margin-bottom:1rem; color:var(--teal); }
+  .campus-info p { color:var(--text-light); line-height:1.7; font-size:1.05rem; margin-bottom:1rem; }
+  .campus-contact { background:var(--teal-light); padding:1.25rem; border-radius:0.75rem; margin:1.5rem 0; }
+  .campus-contact p { margin-bottom:0.5rem; color:var(--text); }
+  .campus-contact a { color:var(--teal); }
+  .campus-ctas { display:flex; gap:1rem; flex-wrap:wrap; }
+</style>

@@ -1,0 +1,48 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Our Leadership — Lily House Montessori Schools">
+  <section class="page-hero">
+    <div class="container">
+      <h1>Our Leadership</h1>
+      <p class="subtitle">Meet the dedicated executive team guiding the vision, values, and growth of all Lily House schools</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container" style="max-width:800px;text-align:center;">
+      <h2 class="section-title">A Commitment to Authentic Education</h2>
+      <p style="font-size:1.1rem;color:var(--text-light);line-height:1.7;">The Lily House leadership is united by a deep-seated passion for authentic Montessori education. Jacques, Steve, and Caitlin are committed to fostering a group of schools that not only nurtures children but also supports families and builds lasting communities. Their combined vision ensures a culture of excellence and care across all campuses.</p>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container" style="max-width:700px;">
+      <h2 class="section-title">Head of Schools</h2>
+      <div style="background:var(--white);border-radius:var(--radius);padding:2rem;box-shadow:var(--shadow);">
+        <h3 style="color:var(--teal);font-size:1.3rem;margin-bottom:0.5rem;">Caitlin Brint</h3>
+        <p style="color:var(--text-light);margin-bottom:1rem;">Head of Schools</p>
+        <p><strong>Email:</strong> <a href="mailto:caitlin@lilyhouseschool.co.za" style="color:var(--teal);">caitlin@lilyhouseschool.co.za</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt text-center">
+    <div class="container">
+      <h2 class="section-title">See Our Vision in Action</h2>
+      <p style="color:var(--text-light);margin-bottom:2rem;max-width:600px;margin-left:auto;margin-right:auto;">Our leadership's commitment to quality and community is present in every one of our campuses. We invite you to explore them or learn more about our philosophy.</p>
+      <div style="display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;">
+        <a href="/admissions" class="btn btn-green">Enroll Now</a>
+        <a href="/contact" class="btn btn-teal">Book a Tour</a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .page-hero { background:linear-gradient(135deg, var(--teal), var(--teal-dark)); padding:5rem 0 3rem; text-align:center; color:var(--white); }
+  .page-hero h1 { font-size:2.5rem; margin-bottom:0.5rem; color:var(--white); }
+  .page-hero .subtitle { font-size:1.1rem; opacity:0.9; color:var(--white); }
+  @media (min-width:768px) { .page-hero { padding:7rem 0 4rem; } .page-hero h1 { font-size:3rem; } }
+</style>

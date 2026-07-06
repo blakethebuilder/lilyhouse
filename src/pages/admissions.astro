@@ -67,7 +67,7 @@ import Layout from '../layouts/Layout.astro';
     <div class="container" style="max-width:700px;">
       <h2 class="section-title">Enroll Now</h2>
       <p class="text-center" style="color:var(--text-light);margin-bottom:2rem;">Complete the form to begin. We'll contact you within 2 business days.</p>
-      <form class="enroll-form" action="/api/contact" method="POST">
+      <form class="enroll-form" action="mailto:blake@smartintegrate.co.za" method="GET" enctype="text/plain">
         <input type="text" name="parent-name" placeholder="Parent's Full Name *" required />
         <input type="text" name="child-name" placeholder="Child's Full Name *" required />
         <input type="email" name="email" placeholder="Parent's Email *" required />

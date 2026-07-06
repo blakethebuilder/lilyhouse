@@ -2,8 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="About Us — Lily House Montessori Schools" description="Learn about Lily House Montessori Schools — our philosophy, Montessori pillars, and commitment to academic excellence in Cape Town.">
-  <!-- Hero -->
+<Layout title="About Us — Lily House Montessori Schools">
   <section class="page-hero">
     <div class="container">
       <h1>About Lily House</h1>
@@ -11,94 +10,45 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
-  <!-- Foundation section -->
   <section class="section">
-    <div class="container">
-      <div style="max-width:800px;margin:0 auto;text-align:center;">
-        <h2 class="section-title">A Foundation for Lifelong Learning</h2>
-        <p style="font-size:1.1rem;line-height:1.7;color:var(--text-light);">
-          At Lily House Montessori Schools, we believe every child is naturally curious and capable. 
-          Our three campuses in Cape Town provide nurturing, child-centred environments where children 
-          aged 18 months to 6 years develop independence, confidence, and a genuine love for learning.
-        </p>
-        <p style="font-size:1.1rem;line-height:1.7;color:var(--text-light);margin-top:1rem;">
-          Guided by the Montessori philosophy and led by experienced, passionate educators, we create 
-          prepared environments that respect each child's unique developmental path. Our mixed-age 
-          classrooms encourage peer learning, collaboration, and social growth.
-        </p>
-      </div>
+    <div class="container" style="max-width:800px;text-align:center;">
+      <h2 class="section-title">A Foundation for Lifelong Learning</h2>
+      <p style="font-size:1.1rem;color:var(--text-light);line-height:1.7;">At Lily House Montessori Schools, we believe every child is naturally curious and capable. Our three campuses in Cape Town provide nurturing, child-centred environments where children aged 18 months to 6 years develop independence, confidence, and a genuine love for learning.</p>
+      <p style="font-size:1.1rem;color:var(--text-light);line-height:1.7;margin-top:1rem;">Guided by the Montessori philosophy and led by experienced, passionate educators, we create prepared environments that respect each child's unique developmental path.</p>
     </div>
   </section>
 
-  <!-- Montessori Pillars -->
   <section class="section section-alt">
     <div class="container">
       <h2 class="section-title">The Montessori Difference</h2>
       <div class="pillars">
-        <div class="pillar-card">
-          <div class="pillar-icon">✋</div>
-          <h3>Hands-On Learning</h3>
-          <p style="color:var(--text-light);">
-            Children learn by doing with specially designed Montessori materials that make abstract concepts tangible and engaging.
-          </p>
-        </div>
-        <div class="pillar-card">
-          <div class="pillar-icon">📈</div>
-          <h3>Individualised Progress</h3>
-          <p style="color:var(--text-light);">
-            Each child follows their own learning journey with uninterrupted work cycles that foster deep concentration and self-direction.
-          </p>
-        </div>
-        <div class="pillar-card">
-          <div class="pillar-icon">🧵</div>
-          <h3>Practical Life Skills</h3>
-          <p style="color:var(--text-light);">
-            Everyday activities build fine motor skills, order, independence, and confidence — laying the foundation for academic success.
-          </p>
-        </div>
+        <div class="pillar-card"><div class="pillar-icon">✋</div><h3>Hands-On Learning</h3><p style="color:var(--text-light);">Children learn by doing with specially designed Montessori materials that make abstract concepts tangible.</p></div>
+        <div class="pillar-card"><div class="pillar-icon">📈</div><h3>Individualised Progress</h3><p style="color:var(--text-light);">Each child follows their own learning journey with uninterrupted work cycles that foster deep concentration.</p></div>
+        <div class="pillar-card"><div class="pillar-icon">🧵</div><h3>Practical Life Skills</h3><p style="color:var(--text-light);">Everyday activities build fine motor skills, order, independence, and confidence — laying the foundation for academic success.</p></div>
       </div>
     </div>
   </section>
 
-  <!-- Academic Excellence -->
   <section class="section">
-    <div class="container">
-      <div class="grid-2" style="align-items:center;">
-        <div>
-          <img
-            src="https://i0.wp.com/lilyhouseschool.co.za/wp-content/uploads/2025/11/Lily-House-12.jpg?fit=800%2C534&ssl=1"
-            alt="Children learning"
-            style="width:100%;border-radius:var(--radius);"
-            loading="lazy"
-          />
-        </div>
-        <div>
-          <h2 style="font-size:1.8rem;margin-bottom:1rem;">Academic Excellence</h2>
-          <p style="color:var(--text-light);line-height:1.7;font-size:1.05rem;">
-            Our curriculum combines the proven Montessori method with the South African 
-            National Curriculum Framework, ensuring children are well-prepared for primary 
-            school and beyond. We focus on:
-          </p>
-          <ul style="margin-top:1rem;list-style:none;">
-            <li style="padding:0.5rem 0;font-size:1rem;color:var(--text-light);">✓ Language and literacy development</li>
-            <li style="padding:0.5rem 0;font-size:1rem;color:var(--text-light);">✓ Mathematical and logical thinking</li>
-            <li style="padding:0.5rem 0;font-size:1rem;color:var(--text-light);">✓ Sensorial exploration and discovery</li>
-            <li style="padding:0.5rem 0;font-size:1rem;color:var(--text-light);">✓ Cultural studies, art, and music</li>
-            <li style="padding:0.5rem 0;font-size:1rem;color:var(--text-light);">✓ Physical development and outdoor play</li>
-          </ul>
-        </div>
+    <div class="container grid-2" style="align-items:center;">
+      <img src="https://i0.wp.com/lilyhouseschool.co.za/wp-content/uploads/2025/11/Lily-House-12.jpg?fit=800%2C534&ssl=1" alt="Students learning" style="width:100%;border-radius:var(--radius);" loading="lazy" />
+      <div>
+        <h2 style="font-size:1.8rem;margin-bottom:1rem;">Academic Excellence</h2>
+        <p style="color:var(--text-light);line-height:1.7;">Our curriculum combines the proven Montessori method with the South African National Curriculum Framework, ensuring children are well-prepared for primary school and beyond.</p>
+        <ul style="margin-top:1rem;list-style:none;">
+          <li style="padding:0.4rem 0;color:var(--text-light);">✓ Language and literacy development</li>
+          <li style="padding:0.4rem 0;color:var(--text-light);">✓ Mathematical and logical thinking</li>
+          <li style="padding:0.4rem 0;color:var(--text-light);">✓ Sensorial exploration and discovery</li>
+          <li style="padding:0.4rem 0;color:var(--text-light);">✓ Cultural studies, art, and music</li>
+          <li style="padding:0.4rem 0;color:var(--text-light);">✓ Physical development and outdoor play</li>
+        </ul>
       </div>
     </div>
   </section>
 
-  <!-- CTA -->
-  <section class="section section-alt">
-    <div class="container text-center">
-      <h2 style="font-size:1.8rem;margin-bottom:1rem;">Visit a Campus</h2>
-      <p style="color:var(--text-light);font-size:1.05rem;margin-bottom:2rem;max-width:600px;margin-left:auto;margin-right:auto;">
-        The best way to experience Lily House is to see it for yourself. Schedule a visit at any of our three campuses.
-      </p>
-      <a href="/contact" class="btn btn-teal" style="font-size:1.05rem;padding:0.8rem 2rem;">Book a Tour</a>
-    </div>
+  <section class="section section-alt text-center">
+    <h2 style="font-size:1.8rem;margin-bottom:1rem;">Visit a Campus</h2>
+    <p style="color:var(--text-light);margin-bottom:2rem;">The best way to experience Lily House is to see it for yourself.</p>
+    <a href="/contact" class="btn btn-teal" style="font-size:1.05rem;">Book a Tour</a>
   </section>
 </Layout>

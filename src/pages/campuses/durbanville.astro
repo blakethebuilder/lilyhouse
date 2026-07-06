@@ -1,7 +1,10 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 const team = [
-  { name:'Tasneem Khan', role:'Head of Campus', img:'' },
+  { name:'Tasneem Khan', role:'Campus lead and toddler guide', img:'https://i0.wp.com/lilyhouseschool.co.za/wp-content/uploads/2025/11/Durbanville-Campus-Lead-Toddler-Directress_Tasneem-Khan.jpg?fit=400%2C534&ssl=1' },
+  { name:'Lettie Mogapi', role:'Toddler assistant', img:'https://i0.wp.com/lilyhouseschool.co.za/wp-content/uploads/2025/11/Durbanville-Toddler-Assistant-Lettie-Mogapi.jpg?fit=400%2C534&ssl=1' },
+  { name:'Patience Mbidzo', role:'Toddler Assistant', img:'https://i0.wp.com/lilyhouseschool.co.za/wp-content/uploads/2025/11/Durbanville-Toddler-Assistant_Patience-Mbidzo.jpg?fit=400%2C534&ssl=1' },
+  { name:'Poppy Morabe', role:'Preschool assistant', img:'https://i0.wp.com/lilyhouseschool.co.za/wp-content/uploads/2025/11/Durbanville-Preschool-Assistant_Poppy-Morabe-1.jpg?fit=400%2C534&ssl=1' },
 ];
 const values = [
   { title:'Prepared Environments', desc:'Safe, stimulating, and nurturing spaces for learning.' },
@@ -13,12 +16,12 @@ const values = [
 
 <Layout title="Durbanville Campus — Lily House Montessori Schools">
   <section class="hero">
-    <img class="hero-bg-img" src="https://i0.wp.com/lilyhouseschool.co.za/wp-content/uploads/2025/02/Lily-House-125-1-scaled.jpg?fit=1200%2C800&ssl=1" alt="" loading="eager" />
+    <img class="hero-bg-img" src="https://i0.wp.com/lilyhouseschool.co.za/wp-content/uploads/2025/02/Lily-House-104-scaled.jpg?fit=1200%2C800&ssl=1" alt="" loading="eager" />
     <div class="hero-overlay"></div>
     <div class="container">
       <div class="hero-content">
-        <h1>Lily House Durbanville:<br />Education in Nature</h1>
-        <p class="subtitle">Education blossoms amidst the rolling vineyards and orchards of the Durbanville valley. Our farm-based campus provides children with space to explore, grow, and learn in an environment that celebrates both nature and academic rigour.</p>
+        <h1>Lily House Durbanville:<br />Where Nature Inspires Learning</h1>
+        <p class="subtitle">Welcome to our unique learning environment nestled in the Durbanville valley. Here, education blossoms amidst rolling vineyards and orchards, using the natural world to spark curiosity and deepen the learning experience.</p>
         <div style="display:flex;gap:0.75rem;flex-wrap:wrap;">
           <a href="/admissions" class="btn btn-green">Enroll Now</a>
           <a href="/contact" class="btn btn-teal">Book a Tour</a>
@@ -32,9 +35,9 @@ const values = [
     <div class="container">
       <h2 class="section-title">Why Choose Our Durbanville Campus?</h2>
       <div class="grid-3">
-        <div class="pillar-card"><h3 style="color:var(--teal);margin-bottom:0.5rem;">Farm-Based Learning</h3><p style="color:var(--text-light);">Children connect with nature daily, exploring orchards and vineyards that provide a unique backdrop for hands-on learning and environmental stewardship.</p></div>
-        <div class="pillar-card"><h3 style="color:var(--teal);margin-bottom:0.5rem;">Mixed-Age Classrooms</h3><p style="color:var(--text-light);">Peer learning builds leadership, collaboration, and social skills. Older children mentor younger ones, reinforcing their own understanding while developing empathy.</p></div>
-        <div class="pillar-card"><h3 style="color:var(--teal);margin-bottom:0.5rem;">Montessori-Certified Guides</h3><p style="color:var(--text-light);">Our dedicated educators nurture each child's innate curiosity, guiding them through carefully prepared environments that foster independence and confidence.</p></div>
+        <div class="pillar-card"><h3 style="color:var(--teal);margin-bottom:0.5rem;">Unparalleled Natural Setting</h3><p style="color:var(--text-light);">Our classrooms extend beyond the walls and into the farm. Children learn and play amidst the beauty of a working farm, fostering a deep connection with nature and each other.</p></div>
+        <div class="pillar-card"><h3 style="color:var(--teal);margin-bottom:0.5rem;">Outdoor Exploration</h3><p style="color:var(--text-light);">Our curriculum seamlessly integrates outdoor learning. Children engage in hands-on discovery, exploring the vineyards, orchards, and gardens, which stimulates curiosity and a love for the natural world.</p></div>
+        <div class="pillar-card"><h3 style="color:var(--teal);margin-bottom:0.5rem;">Sensory-Rich Environment</h3><p style="color:var(--text-light);">The sights, sounds, and smells of the farm stimulate all the senses. This unique setting enriches the learning process and creates a tranquil, supportive environment for growth.</p></div>
       </div>
     </div>
   </section>
@@ -50,9 +53,9 @@ const values = [
   <section class="section section-alt">
     <div class="container">
       <div class="lead-block">
-        <div style="width:100%;height:300px;background:var(--teal-light);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;font-size:4rem;font-weight:800;color:var(--teal);">TK</div>
+        <img src="https://i0.wp.com/lilyhouseschool.co.za/wp-content/uploads/2025/11/Durbanville-Campus-Lead-Toddler-Directress_Tasneem-Khan.jpg?fit=800%2C534&ssl=1" alt="Tasneem Khan" loading="lazy" />
         <div class="lead-info">
-          <h2>Meet Our Head of Campus</h2>
+          <h2>Meet Our Campus Lead</h2>
           <p><strong>Name:</strong> Tasneem Khan</p>
           <p><strong>Email:</strong> <a href="mailto:tasneem@lilyhouseschool.co.za">tasneem@lilyhouseschool.co.za</a></p>
           <a href="/admissions" class="btn btn-green" style="margin-top:1rem;">Enroll Now</a>
@@ -64,7 +67,7 @@ const values = [
   <section class="section">
     <div class="container">
       <h2 class="section-title">Meet the Durbanville Team</h2>
-      <p class="text-center" style="color:var(--text-light);margin-bottom:2rem;">Our dedicated educators make the Durbanville campus a nurturing place to learn and grow.</p>
+      <p class="text-center" style="color:var(--text-light);margin-bottom:2rem;">Our team of passionate educators uses the surrounding vineyards and orchards as an extension of the classroom to spark curiosity and a love for nature.</p>
       <div class="team-grid">
         {team.map(m => (
           <div class="team-card">
@@ -73,13 +76,12 @@ const values = [
           </div>
         ))}
       </div>
-      <p class="text-center" style="color:var(--text-light);margin-top:1rem;font-size:0.9rem;">More team member details coming soon. Contact the campus for the full team.</p>
     </div>
   </section>
 
   <section class="section section-alt text-center">
     <h2 style="font-size:1.8rem;margin-bottom:0.5rem;">Tour Our Durbanville Campus</h2>
-    <p style="color:var(--text-light);margin-bottom:1.5rem;">Come and see our farm-based campus for yourself. We'd love to show you around.</p>
+    <p style="color:var(--text-light);margin-bottom:1.5rem;">Come and explore our one-of-a-kind learning environment. We'd love to show you around.</p>
     <a href="/contact" class="btn btn-teal" style="font-size:1.05rem;">Book a Tour</a>
   </section>
 </Layout>

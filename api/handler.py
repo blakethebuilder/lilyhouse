@@ -4,11 +4,11 @@ import os, ssl, smtplib, urllib.parse
 from http.server import HTTPServer, BaseHTTPRequestHandler
 from email.mime.text import MIMEText
 
-SMTP_HOST = os.getenv("SMTP_HOST", "mail.smartintegrate.co.za")
+SMTP_HOST = os.environ["SMTP_HOST"]
 SMTP_PORT = int(os.getenv("SMTP_PORT", "587"))
-SMTP_USER = os.getenv("SMTP_USER", "agentsmart@smartintegrate.co.za")
-SMTP_PASS = os.getenv("SMTP_PASS", "Smart@2026!")
-TO_EMAIL = os.getenv("TO_EMAIL", "blake@smartintegrate.co.za, qaanita@lilyhouseschool.co.za")
+SMTP_USER = os.environ["SMTP_USER"]
+SMTP_PASS = os.environ["SMTP_PASS"]
+TO_EMAIL = os.environ["TO_EMAIL"]
 
 class Handler(BaseHTTPRequestHandler):
     def do_POST(self):

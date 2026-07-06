@@ -1,0 +1,123 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const team = [
+  { name:'Qaanita Hendricks', role:'Campus lead and toddler guide', img:'https://i0.wp.com/lilyhouseschool.co.za/wp-content/uploads/2025/11/Claremont-Campus-Lead-and-Toddler-Directress-Qaanita-Hendricks.jpg?fit=400%2C534&ssl=1' },
+  { name:'Gracia Kabambi', role:'Toddler assistant', img:'https://i0.wp.com/lilyhouseschool.co.za/wp-content/uploads/2025/11/Claremont-Toddler-Assistant-Gracia-Kabambi.jpg?fit=400%2C534&ssl=1' },
+  { name:'Saahira Smith', role:'Preschool guide', img:'' },
+  { name:'Trust Obinna', role:'Preschool assistant', img:'' },
+  { name:'Doris Helem', role:'Housekeeping and cook', img:'' },
+];
+const values = [
+  { title:'Prepared Environments', desc:'Safe, stimulating, and nurturing spaces for learning.' },
+  { title:'Complete Wellness', desc:'Supporting the physical, emotional, and social well-being of each child.' },
+  { title:'Self & Creative Expression', desc:'Opportunities for art, music, movement, and imaginative play.' },
+  { title:'Child-Centred Learning', desc:'A curriculum designed to meet the individual needs and interests of each child.' },
+];
+---
+
+<Layout title="Claremont Campus — Lily House Montessori Schools">
+  <section class="hero">
+    <img class="hero-bg-img" src="https://i0.wp.com/lilyhouseschool.co.za/wp-content/uploads/2025/11/Jaxon_B_Candid-6.jpg?fit=1200%2C800&ssl=1" alt="" loading="eager" />
+    <div class="hero-overlay"></div>
+    <div class="container">
+      <div class="hero-content">
+        <h1>Lily House Claremont:<br />Small Class, Big Growth</h1>
+        <p class="subtitle">Welcome to our nurturing haven in the heart of Claremont. Our intimate campus provides a personalised learning experience focusing on deep connections and hands-on exploration.</p>
+        <a href="/admissions" class="btn btn-green">Enroll Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose -->
+  <section class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">Why Choose Our Claremont Campus?</h2>
+      <div class="grid-3">
+        <div class="pillar-card"><h3 style="color:var(--teal);margin-bottom:0.5rem;">Intimate Learning</h3><p style="color:var(--text-light);">Our limited class sizes ensure every child receives individualised attention. This builds strong teacher-student bonds and creates a close-knit community where every child is known and valued.</p></div>
+        <div class="pillar-card"><h3 style="color:var(--teal);margin-bottom:0.5rem;">Prime Location</h3><p style="color:var(--text-light);">Situated in the heart of the Southern Suburbs, our campus is surrounded by greenery and a strong sense of community, making it a safe, walkable, and welcoming environment.</p></div>
+        <div class="pillar-card"><h3 style="color:var(--teal);margin-bottom:0.5rem;">Prepared Environments</h3><p style="color:var(--text-light);">Our classrooms are carefully designed for the child. Child-sized furniture and hands-on materials empower children to choose their own work and build deep concentration.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values -->
+  <section class="section">
+    <div class="container">
+      <div class="values-grid">
+        {values.map(v => (
+          <div class="value-card">
+            <h3>{v.title}</h3>
+            <p>{v.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Campus Lead -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="lead-block">
+        <img src="https://i0.wp.com/lilyhouseschool.co.za/wp-content/uploads/2025/11/Claremont-Campus-Lead-and-Toddler-Directress-Qaanita-Hendricks.jpg?fit=800%2C534&ssl=1" alt="Qaanita Hendricks with a student" loading="lazy" />
+        <div class="lead-info">
+          <h2>Meet Our Campus Lead</h2>
+          <p><strong>Name:</strong> Qaanita Hendricks</p>
+          <p><strong>Email:</strong> <a href="mailto:qaanita@lilyhouseschool.co.za">qaanita@lilyhouseschool.co.za</a></p>
+          <a href="/admissions" class="btn btn-green" style="margin-top:1rem;">Enroll Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Meet the Claremont Team</h2>
+      <p class="text-center" style="color:var(--text-light);margin-bottom:2rem;">Meet the passionate educators who provide personalised attention and build deep connections in our intimate, small-class setting.</p>
+      <div class="team-grid">
+        {team.map(m => (
+          <div class="team-card">
+            {m.img ? <img src={m.img} alt={m.name} loading="lazy" /> : <div class="team-placeholder">{m.name.split(' ').map(n => n[0]).join('')}</div>}
+            <div class="team-body">
+              <h3>{m.name}</h3>
+              <p>{m.role}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section section-alt text-center">
+    <h2 style="font-size:1.8rem;margin-bottom:0.5rem;">Tour Our Claremont Campus</h2>
+    <p style="color:var(--text-light);margin-bottom:1.5rem;">Come and see our intimate learning environment for yourself. We'd love to show you around.</p>
+    <a href="/contact" class="btn btn-teal" style="font-size:1.05rem;">Book a Tour</a>
+  </section>
+</Layout>
+
+<style>
+  .values-grid { display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; }
+  @media (min-width:768px) { .values-grid { grid-template-columns:repeat(4,1fr); } }
+  .value-card { background:var(--teal-light); border-radius:var(--radius); padding:1.5rem; text-align:center; }
+  .value-card h3 { font-size:1rem; color:var(--teal); margin-bottom:0.5rem; font-weight:700; }
+  .value-card p { font-size:0.85rem; color:var(--text-light); }
+
+  .lead-block { display:grid; grid-template-columns:1fr; gap:2rem; align-items:center; }
+  @media (min-width:768px) { .lead-block { grid-template-columns:1fr 1fr; } }
+  .lead-block img { width:100%; border-radius:var(--radius); }
+  .lead-info h2 { font-size:1.6rem; color:var(--teal); margin-bottom:1rem; }
+  .lead-info p { margin-bottom:0.5rem; color:var(--text-light); }
+  .lead-info a { color:var(--teal); }
+
+  .team-grid { display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; }
+  @media (min-width:768px) { .team-grid { grid-template-columns:repeat(3,1fr); } }
+  .team-card { background:var(--white); border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow); transition:transform 0.3s ease, box-shadow 0.3s ease; }
+  .team-card:hover { transform:translateY(-4px); box-shadow:var(--shadow-lg); }
+  .team-card img { width:100%; height:260px; object-fit:cover; }
+  .team-placeholder { width:100%; height:200px; background:var(--teal-light); display:flex; align-items:center; justify-content:center; font-size:2rem; font-weight:800; color:var(--teal); }
+  .team-body { padding:1rem; }
+  .team-body h3 { font-size:1rem; color:var(--teal); margin-bottom:0.25rem; }
+  .team-body p { font-size:0.85rem; color:var(--text-light); }
+</style>

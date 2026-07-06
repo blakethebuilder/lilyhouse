@@ -1,7 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 const team = [
-  { name:'Tasneem Khan', role:'Campus lead and toddler guide', img:'https://i0.wp.com/lilyhouseschool.co.za/wp-content/uploads/2025/11/Durbanville-Campus-Lead-Toddler-Directress_Tasneem-Khan.jpg?fit=400%2C534&ssl=1', email:'tasneem@lilyhouseschool.co.za' },
+  { name:'Tasneem Khan', role:'Campus lead and toddler guide', img:'https://i0.wp.com/lilyhouseschool.co.za/wp-content/uploads/2025/11/Durbanville-Campus-Lead-Toddler-Directress_Tasneem-Khan.jpg?fit=400%2C534&ssl=1', email:'tasneem@lilyhouseschool.co.za', phone:'074 549 7336', wa:'27745497336' },
   { name:'Lettie Mogapi', role:'Toddler assistant', img:'https://i0.wp.com/lilyhouseschool.co.za/wp-content/uploads/2025/11/Durbanville-Toddler-Assistant-Lettie-Mogapi.jpg?fit=400%2C534&ssl=1' },
   { name:'Patience Mbidzo', role:'Toddler Assistant', img:'https://i0.wp.com/lilyhouseschool.co.za/wp-content/uploads/2025/11/Durbanville-Toddler-Assistant_Patience-Mbidzo.jpg?fit=400%2C534&ssl=1' },
   { name:'Poppy Morabe', role:'Preschool assistant', img:'https://i0.wp.com/lilyhouseschool.co.za/wp-content/uploads/2025/11/Durbanville-Preschool-Assistant_Poppy-Morabe-1.jpg?fit=400%2C534&ssl=1' },
@@ -17,11 +17,7 @@ const team = [
       <div class="hero-content">
         <h1>Lily House Durbanville:<br />Where Nature Inspires Learning</h1>
         <p class="subtitle">Welcome to our unique learning environment nestled in the Durbanville valley. Here, education blossoms amidst rolling vineyards and orchards, using the natural world to spark curiosity and deepen the learning experience.</p>
-        <div style="display:flex;gap:0.75rem;flex-wrap:wrap;">
-          <a href="/admissions" class="btn btn-green">Enroll Now</a>
-          <a href="/contact" class="btn btn-teal">Book a Tour</a>
-          <a href="https://wa.me/27745497336" class="btn btn-green" target="_blank" rel="noopener">WhatsApp</a>
-        </div>
+        <a href="/contact" class="btn btn-green">Book a Tour</a>
       </div>
     </div>
   </section>
@@ -46,7 +42,7 @@ const team = [
         {team.map(m => (
           <div class={'team-card' + (m.email ? ' team-lead' : '')}>
             {m.img ? <img src={m.img} alt={m.name} loading="lazy" /> : <div class="team-placeholder">{m.name.split(' ').map(n => n[0]).join('')}</div>}
-            <div class="team-body"><h3>{m.name}</h3><p>{m.role}</p>{m.email && <p class="team-email"><a href={'mailto:' + m.email}>{m.email}</a></p>}</div>
+            <div class="team-body"><h3>{m.name}</h3><p>{m.role}</p>{m.email && <p class="team-email"><a href={'mailto:' + m.email}>{m.email}</a></p>}{m.phone && <p class="team-email">{m.phone}</p>}{m.wa && <div class="team-ctas" style="margin-top:0.5rem;display:flex;gap:0.5rem;flex-wrap:wrap;"><a href="/admissions" class="btn btn-green" style="font-size:0.8rem;padding:0.4rem 1rem;">Enroll Now</a><a href={'https://wa.me/' + m.wa} class="btn btn-teal" style="font-size:0.8rem;padding:0.4rem 1rem;">WhatsApp</a></div>}</div>
           </div>
         ))}
       </div>

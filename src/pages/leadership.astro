@@ -11,19 +11,20 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <section class="section">
-    <div class="container" style="max-width:800px;text-align:center;">
-      <h2 class="section-title">A Commitment to Authentic Education</h2>
-      <p style="font-size:1.1rem;color:var(--text-light);line-height:1.7;">The Lily House leadership is united by a deep-seated passion for authentic Montessori education. Jacques, Steve, and Caitlin are committed to fostering a group of schools that not only nurtures children but also supports families and builds lasting communities. Their combined vision ensures a culture of excellence and care across all campuses.</p>
-    </div>
-  </section>
-
-  <section class="section section-alt">
-    <div class="container" style="max-width:700px;">
-      <h2 class="section-title">Head of Schools</h2>
-      <div style="background:var(--white);border-radius:var(--radius);padding:2rem;box-shadow:var(--shadow);">
-        <h3 style="color:var(--teal);font-size:1.3rem;margin-bottom:0.5rem;">Caitlin Brint</h3>
-        <p style="color:var(--text-light);margin-bottom:1rem;">Head of Schools</p>
-        <p><strong>Email:</strong> <a href="mailto:caitlin@lilyhouseschool.co.za" style="color:var(--teal);">caitlin@lilyhouseschool.co.za</a></p>
+    <div class="container">
+      <div class="leadership-block">
+        <div class="leadership-img">
+          <img src="https://i0.wp.com/lilyhouseschool.co.za/wp-content/uploads/2025/11/Caitlin-Brint_Head-of-Schools1.jpg?fit=800%2C534&ssl=1" alt="Caitlin Brint, Head of Schools" loading="lazy" />
+        </div>
+        <div class="leadership-content">
+          <h2 style="color:var(--teal);margin-bottom:1rem;">A Commitment to Authentic Education</h2>
+          <p style="color:var(--text-light);line-height:1.7;margin-bottom:1rem;">The Lily House leadership is united by a deep-seated passion for authentic Montessori education. Jacques, Steve, and Caitlin are committed to fostering a group of schools that not only nurtures children but also supports families and builds lasting communities. Their combined vision ensures a culture of excellence and care across all campuses.</p>
+          <div style="margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid #e5e7eb;">
+            <p style="font-weight:700;color:var(--teal);margin-bottom:0.25rem;">Caitlin Brint</p>
+            <p style="color:var(--text-light);font-size:0.9rem;">Head of Schools</p>
+            <p style="margin-top:0.5rem;"><a href="mailto:caitlin@lilyhouseschool.co.za" style="color:var(--teal);">caitlin@lilyhouseschool.co.za</a></p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -45,4 +46,11 @@ import Layout from '../layouts/Layout.astro';
   .page-hero h1 { font-size:2.5rem; margin-bottom:0.5rem; color:var(--white); }
   .page-hero .subtitle { font-size:1.1rem; opacity:0.9; color:var(--white); }
   @media (min-width:768px) { .page-hero { padding:7rem 0 4rem; } .page-hero h1 { font-size:3rem; } }
+
+  .leadership-block { display:grid; grid-template-columns:1fr; gap:2rem; align-items:center; }
+  @media (min-width:768px) { .leadership-block { grid-template-columns:1fr 1fr; } }
+  .leadership-img img { width:100%; border-radius:var(--radius); box-shadow:var(--shadow); }
+  .leadership-content { max-width:600px; }
+  .leadership-content h2 { font-size:1.5rem; }
+  @media (min-width:768px) { .leadership-content h2 { font-size:1.8rem; } }
 </style>

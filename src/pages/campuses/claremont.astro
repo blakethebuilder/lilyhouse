@@ -8,12 +8,7 @@ const team = [
   { name:'Trust Obinna', role:'Preschool assistant', img:'' },
   { name:'Doris Helem', role:'Housekeeping and cook', img:'' },
 ];
-const values = [
-  { title:'Prepared Environments', desc:'Safe, stimulating, and nurturing spaces for learning.' },
-  { title:'Complete Wellness', desc:'Supporting the physical, emotional, and social well-being of each child.' },
-  { title:'Self & Creative Expression', desc:'Opportunities for art, music, movement, and imaginative play.' },
-  { title:'Child-Centred Learning', desc:'A curriculum designed to meet the individual needs and interests of each child.' },
-];
+
 ---
 
 <Layout title="Claremont Campus — Lily House Montessori Schools">
@@ -41,14 +36,6 @@ const values = [
         <div class="pillar-card"><h3 style="color:var(--teal);margin-bottom:0.5rem;">Intimate Learning</h3><p style="color:var(--text-light);">Our limited class sizes ensure every child receives individualised attention. This builds strong teacher-student bonds and creates a close-knit community where every child is known and valued.</p></div>
         <div class="pillar-card"><h3 style="color:var(--teal);margin-bottom:0.5rem;">Prime Location</h3><p style="color:var(--text-light);">Situated in the heart of the Southern Suburbs, our campus is surrounded by greenery and a strong sense of community, making it a safe, walkable, and welcoming environment.</p></div>
         <div class="pillar-card"><h3 style="color:var(--teal);margin-bottom:0.5rem;">Prepared Environments</h3><p style="color:var(--text-light);">Our classrooms are carefully designed for the child. Child-sized furniture and hands-on materials empower children to choose their own work and build deep concentration.</p></div>
-      </div>
-      <div class="values-grid" style="margin-top:2rem;">
-        {values.map(v => (
-          <div class="value-card">
-            <h3>{v.title}</h3>
-            <p>{v.desc}</p>
-          </div>
-        ))}
       </div>
     </div>
   </section>
@@ -82,11 +69,7 @@ const values = [
 </Layout>
 
 <style>
-  .values-grid { display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; }
-  @media (min-width:768px) { .values-grid { grid-template-columns:repeat(4,1fr); } }
-  .value-card { background:var(--teal-light); border-radius:var(--radius); padding:1.5rem; text-align:center; }
-  .value-card h3 { font-size:1rem; color:var(--teal); margin-bottom:0.5rem; font-weight:700; }
-  .value-card p { font-size:0.85rem; color:var(--text-light); }
+
 
   .lead-block { display:grid; grid-template-columns:1fr; gap:2rem; align-items:center; }
   @media (min-width:768px) { .lead-block { grid-template-columns:1fr 1fr; } }

@@ -6,12 +6,7 @@ const team = [
   { name:'Patience Mbidzo', role:'Toddler Assistant', img:'https://i0.wp.com/lilyhouseschool.co.za/wp-content/uploads/2025/11/Durbanville-Toddler-Assistant_Patience-Mbidzo.jpg?fit=400%2C534&ssl=1' },
   { name:'Poppy Morabe', role:'Preschool assistant', img:'https://i0.wp.com/lilyhouseschool.co.za/wp-content/uploads/2025/11/Durbanville-Preschool-Assistant_Poppy-Morabe-1.jpg?fit=400%2C534&ssl=1' },
 ];
-const values = [
-  { title:'Prepared Environments', desc:'Safe, stimulating, and nurturing spaces for learning.' },
-  { title:'Complete Wellness', desc:'Supporting the physical, emotional, and social well-being of each child.' },
-  { title:'Self & Creative Expression', desc:'Opportunities for art, music, movement, and imaginative play.' },
-  { title:'Child-Centred Learning', desc:'A curriculum designed to meet the individual needs and interests of each child.' },
-];
+
 ---
 
 <Layout title="Durbanville Campus — Lily House Montessori Schools">
@@ -39,9 +34,7 @@ const values = [
         <div class="pillar-card"><h3 style="color:var(--teal);margin-bottom:0.5rem;">Outdoor Exploration</h3><p style="color:var(--text-light);">Our curriculum seamlessly integrates outdoor learning. Children engage in hands-on discovery, exploring the vineyards, orchards, and gardens, which stimulates curiosity and a love for the natural world.</p></div>
         <div class="pillar-card"><h3 style="color:var(--teal);margin-bottom:0.5rem;">Sensory-Rich Environment</h3><p style="color:var(--text-light);">The sights, sounds, and smells of the farm stimulate all the senses. This unique setting enriches the learning process and creates a tranquil, supportive environment for growth.</p></div>
       </div>
-      <div class="values-grid" style="margin-top:2rem;">
-        {values.map(v => (<div class="value-card"><h3>{v.title}</h3><p>{v.desc}</p></div>))}
-      </div>
+
     </div>
   </section>
 
@@ -67,11 +60,7 @@ const values = [
   </section>
 </Layout>
 <style>
-  .values-grid { display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; }
-  @media (min-width:768px) { .values-grid { grid-template-columns:repeat(4,1fr); } }
-  .value-card { background:var(--teal-light); border-radius:var(--radius); padding:1.5rem; text-align:center; }
-  .value-card h3 { font-size:1rem; color:var(--teal); margin-bottom:0.5rem; font-weight:700; }
-  .value-card p { font-size:0.85rem; color:var(--text-light); }
+
   .lead-block { display:grid; grid-template-columns:1fr; gap:2rem; align-items:center; }
   @media (min-width:768px) { .lead-block { grid-template-columns:1fr 1fr; } }
   .lead-block img { width:100%; border-radius:var(--radius); }

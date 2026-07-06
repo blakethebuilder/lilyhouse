@@ -35,6 +35,12 @@ const {
       --radius: 1rem;
       --shadow: 0 4px 12px rgba(0,0,0,0.06);
       --shadow-lg: 0 12px 32px rgba(0,0,0,0.1);
+
+      /* aliases for page components */
+      --primary: var(--teal);
+      --accent: var(--green);
+      --card-bg: var(--teal-light);
+      --text-secondary: var(--text-light);
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -94,13 +100,15 @@ const {
     .nav-cta {
       display: inline-block;
       font-family: 'Raleway', sans-serif;
-      font-weight: 700; font-size: 0.85rem;
+      font-weight: 700; font-size: 0.8rem;
       padding: 0.5rem 1.2rem; border-radius: 2rem;
-      background: var(--teal); color: var(--white);
       text-decoration: none; margin-left: 0.5rem;
       transition: background 0.2s, transform 0.2s;
     }
-    .nav-cta:hover { background: var(--teal-dark); transform: translateY(-1px); }
+    .nav-cta-green { background: var(--green); color: var(--white); }
+    .nav-cta-green:hover { background: #008040; transform: translateY(-1px); }
+    .nav-cta-teal { background: var(--teal); color: var(--white); }
+    .nav-cta-teal:hover { background: var(--teal-dark); transform: translateY(-1px); }
 
     .btn {
       display: inline-block; font-family: 'Raleway', sans-serif;
@@ -110,11 +118,68 @@ const {
       transition: transform 0.2s, box-shadow 0.2s;
     }
     .btn:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(0,0,0,0.15); }
+    .btn-green { background: var(--green); color: var(--white); }
+    .btn-teal { background: var(--teal); color: var(--white); }
+    .btn-teal:hover { background: var(--teal-dark); }
+
+    /* === HERO (full-width bg image) === */
+    .hero {
+      position: relative;
+      min-height: 60vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+    .hero-bg-img {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+    }
+    .hero-overlay {
+      position: absolute; inset: 0;
+      background: rgba(0,0,0,0.45);
+    }
+    .hero-content {
+      position: relative; z-index: 2;
+      max-width: 680px;
+      padding: 4rem 0;
+    }
+    .hero-content h1 {
+      font-size: 2.8rem;
+      font-weight: 900;
+      color: var(--white);
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+    .hero-content .subtitle {
+      font-size: 1.15rem;
+      color: rgba(255,255,255,0.9);
+      line-height: 1.7;
+      margin-bottom: 2rem;
+    }
+    .hero-content .btn { font-size: 1rem; padding: 0.85rem 2rem; }
+
+    /* === PAGE HERO (inner pages) === */
+    .page-hero {
+      background: var(--teal);
+      padding: 4rem 0;
+      text-align: center;
+    }
+    .page-hero h1 {
+      font-size: 2.4rem;
+      font-weight: 900;
+      color: var(--white);
+      margin-bottom: 0.5rem;
+    }
+    .page-hero .subtitle {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.85);
+    }
 
     /* === SECTIONS === */
     .section { padding: 5rem 0; }
     .section-title { font-size: 2.2rem; text-align: center; margin-bottom: 3rem; color: var(--text); font-weight: 800; }
-    .section-teal { background: var(--teal-light); }
+    .section-alt { background: var(--teal-light); }
     .section-cream { background: var(--cream); }
     .section-green { background: var(--green-light); }
 
@@ -123,12 +188,6 @@ const {
       text-transform: uppercase; letter-spacing: 0.12em;
       color: var(--teal); margin-bottom: 0.5rem;
     }
-    .section-tag::before {
-      content: ''; display: block; width: 28px; height: 3px;
-      background: var(--teal); border-radius: 2px; margin-bottom: 0.75rem;
-    }
-    .section-header { text-align: center; max-width: 600px; margin: 0 auto 3rem; }
-    .section-header .section-tag::before { margin: 0 auto 0.75rem; }
 
     /* === CARDS === */
     .card {
@@ -144,10 +203,50 @@ const {
     .grid-2 { display: grid; grid-template-columns: 1fr; gap: 2rem; }
     @media (min-width: 768px) { .grid-2 { grid-template-columns: repeat(2, 1fr); } }
 
+    /* === STEP CARDS === */
+    .step {
+      text-align: center;
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 2.5rem 1.5rem;
+      box-shadow: var(--shadow);
+    }
+    .step-number {
+      width: 48px; height: 48px;
+      border-radius: 50%;
+      background: var(--teal);
+      color: var(--white);
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 800; font-size: 1.2rem;
+      margin: 0 auto 1rem;
+    }
+    .step h3 { font-size: 1.15rem; margin-bottom: 0.5rem; color: var(--teal); }
+
+    /* === FEE TABLE === */
+    .fee-table { width: 100%; border-collapse: collapse; }
+    .fee-table th, .fee-table td {
+      padding: 0.75rem 1rem;
+      text-align: left;
+      border-bottom: 1px solid #E5E7EB;
+    }
+    .fee-table th {
+      background: var(--teal);
+      color: var(--white);
+      font-weight: 700;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .fee-table th:first-child { border-radius: 0.5rem 0 0 0; }
+    .fee-table th:last-child { border-radius: 0 0.5rem 0 0; }
+    .fee-amount { font-weight: 700; color: var(--teal); text-align: right; }
+
     /* === FOOTER === */
     .footer {
-      background: var(--text); color: rgba(255,255,255,0.8);
-      padding: 4rem 0 1.5rem; margin-top: 4rem;
+      background: #1a2a3a;
+      color: rgba(255,255,255,0.8);
+      padding: 4rem 0 1.5rem;
+      margin-top: 4rem;
     }
     .footer-grid {
       display: grid; grid-template-columns: 1fr; gap: 2rem;
@@ -169,10 +268,12 @@ const {
     .blog-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
     .blog-card img { width: 100%; height: 200px; object-fit: cover; }
     .blog-card-body { padding: 1.5rem; }
-    .blog-card-body time { font-size: 0.85rem; color: var(--text-light); }
-    .blog-card-body h3 { font-size: 1.15rem; margin: 0.5rem 0; }
+    .blog-card-body time { font-size: 0.85rem; color: var(--text-light); display: block; margin-bottom: 0.5rem; }
+    .blog-card-body h3 { font-size: 1.15rem; margin: 0 0 0.5rem; }
+    .blog-card-body h3 a { color: var(--teal); text-decoration: none; }
+    .blog-card-body h3 a:hover { text-decoration: underline; }
     .blog-card-body p { color: var(--text-light); font-size: 0.9rem; }
-    .read-more { display: inline-block; margin-top: 0.75rem; font-weight: 600; color: var(--teal); text-decoration: none; }
+    .read-more { display: inline-block; margin-top: 0.75rem; font-weight: 600; color: var(--green); text-decoration: none; }
 
     /* === FORM === */
     .form-group { margin-bottom: 1.25rem; }
@@ -186,6 +287,7 @@ const {
     .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
       outline: none; border-color: var(--teal);
     }
+    .form-group .radio-group { display: flex; gap: 1.5rem; flex-wrap: wrap; }
 
     /* === CTA BANNER === */
     .cta-banner {
@@ -205,6 +307,38 @@ const {
     /* === MISC === */
     .text-center { text-align: center; }
     .mt-2 { margin-top: 2rem; }
+    .mb-2 { margin-bottom: 2rem; }
+
+    /* === CAMPUS CARD (used on contact page) === */
+    .campus-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      box-shadow: var(--shadow);
+    }
+    .campus-card h3 { font-size: 1.2rem; color: var(--teal); margin-bottom: 0.75rem; }
+    .campus-card p { font-size: 0.9rem; margin-bottom: 0.4rem; color: var(--text-light); }
+    .campus-card a { color: var(--teal); }
+
+    /* === PILLARS === */
+    .pillars { display: grid; grid-template-columns: 1fr; gap: 2rem; }
+    @media (min-width: 768px) { .pillars { grid-template-columns: repeat(3, 1fr); } }
+    .pillar-card {
+      text-align: center;
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 2rem 1.5rem;
+      box-shadow: var(--shadow);
+    }
+    .pillar-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+
+    /* === CAMPUS ROW (home page) === */
+    .campus-row {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    @media (min-width: 768px) { .campus-row { grid-template-columns: repeat(3, 1fr); } }
 
     /* === MOBILE === */
     .nav-toggle { display: none; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--teal); }
@@ -223,6 +357,10 @@ const {
       .nav .dropdown-menu { position: static; box-shadow: none; padding-left: 1rem; display: none; border: none; }
       .nav .dropdown.open .dropdown-menu { display: block; }
       .nav-cta { margin-left: 0; margin-top: 0.5rem; text-align: center; }
+
+      .hero { min-height: 50vh; }
+      .hero-content h1 { font-size: 1.8rem; }
+      .hero-content .subtitle { font-size: 1rem; }
 
       .section-title { font-size: 1.6rem !important; }
       .section { padding: 3rem 0 !important; }
@@ -255,7 +393,8 @@ const {
         <a href="/admissions">Admissions</a>
         <a href="/blog">Blog</a>
         <a href="/contact">Contact</a>
-        <a href="/admissions" class="nav-cta">Enroll Now</a>
+        <a href="/admissions" class="nav-cta nav-cta-green">Book a Tour</a>
+        <a href="/admissions" class="nav-cta nav-cta-teal">Enroll Now</a>
       </nav>
     </div>
   </header>
@@ -265,12 +404,12 @@ const {
   <footer class="footer">
     <div class="footer-grid">
       <div>
-        <h3>📍 Our Campuses</h3>
-        <p><strong>Claremont</strong><br />80 Queen Victoria Road<br />qaanita@lilyhouseschool.co.za</p>
+        <h3>📍 Campus Locations</h3>
+        <p><strong>Lily House Claremont:</strong><br />80 Queen Victoria Road, Claremont, Cape Town</p>
         <br />
-        <p><strong>Durbanville</strong><br />16 Hooggelegen Road<br />tasneem@lilyhouseschool.co.za</p>
+        <p><strong>Lily House Durbanville:</strong><br />16 Hooggelegen Road, Durbanville, Cape Town</p>
         <br />
-        <p><strong>Melkbos</strong><br />42 Charles Hoffe Avenue<br />jess@lilyhouseschool.co.za</p>
+        <p><strong>Lily House Melkbos:</strong><br />42 Charles Hoffe Avenue, Van Riebeekstrand, Cape Town</p>
       </div>
       <div>
         <h3>🔗 Quick Links</h3>
@@ -286,9 +425,9 @@ const {
       </div>
       <div>
         <h3>📱 Connect With Us</h3>
-        <p>Claremont: <a href="https://facebook.com">Facebook</a> · <a href="https://instagram.com">Instagram</a></p>
-        <p>Durbanville: <a href="https://facebook.com">Facebook</a> · <a href="https://instagram.com">Instagram</a></p>
-        <p>Melkbos: <a href="https://facebook.com">Facebook</a> · <a href="https://instagram.com">Instagram</a></p>
+        <p><strong>Claremont:</strong><br /><a href="https://facebook.com">Facebook</a> · <a href="https://instagram.com">Instagram</a></p>
+        <p style="margin-top:0.75rem;"><strong>Durbanville:</strong><br /><a href="https://facebook.com">Facebook</a> · <a href="https://instagram.com">Instagram</a></p>
+        <p style="margin-top:0.75rem;"><strong>Melkbos:</strong><br /><a href="https://facebook.com">Facebook</a> · <a href="https://instagram.com">Instagram</a></p>
         <p style="margin-top:2rem;font-size:0.8rem;">&copy; 2026 Lily House Montessori Schools</p>
       </div>
     </div>

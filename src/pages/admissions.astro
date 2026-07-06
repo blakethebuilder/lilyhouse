@@ -4,84 +4,81 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title="Admissions — Lily House Montessori Schools" description="Enroll at Lily House Montessori Schools. View fees, book a tour, and apply online for our Claremont, Durbanville, and Melkbos campuses.">
   <!-- Hero -->
-  <section class="hero">
-    <img
-      class="hero-bg"
-      src="https://images.unsplash.com/photo-1596464716127-f2a82984de30?w=800&q=75"
-      alt="Children at play"
-      loading="eager"
-    />
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
+  <section class="page-hero">
+    <div class="container">
       <h1>Admissions</h1>
-      <p class="subtitle">Join the Lily House family</p>
+      <p class="subtitle">Start Your Child's Journey at Lily House</p>
+    </div>
+  </section>
+
+  <!-- Intro -->
+  <section class="section">
+    <div class="container">
+      <div style="max-width:700px;margin:0 auto;text-align:center;">
+        <p style="font-size:1.1rem;color:var(--text-light);line-height:1.7;">
+          We are so glad you're here. We've made our admissions process simple and straightforward. 
+          Find all the information you need to enroll your child below.
+        </p>
+      </div>
     </div>
   </section>
 
   <!-- Enrollment Process -->
-  <section class="section">
+  <section class="section section-alt" style="padding-top:0;">
     <div class="container">
-      <h2 class="section-title">Enrollment Process</h2>
+      <h2 class="section-title">Our Enrolment Process</h2>
       <div class="grid-3">
         <div class="step">
           <div class="step-number">1</div>
           <h3>Book a Tour</h3>
-          <p style="color:var(--text-secondary);">Visit your preferred campus to see our Montessori environments in action and meet our educators.</p>
+          <p style="color:var(--text-light);">We invite you to visit a campus, meet our team, and see our Montessori philosophy in action.</p>
         </div>
         <div class="step">
           <div class="step-number">2</div>
           <h3>Apply Online</h3>
-          <p style="color:var(--text-secondary);">Complete our online enrollment form below and submit the required documentation.</p>
+          <p style="color:var(--text-light);">Complete our simple online application form below. This will begin the official enrollment process.</p>
         </div>
         <div class="step">
           <div class="step-number">3</div>
           <h3>Welcome to Lily House</h3>
-          <p style="color:var(--text-secondary);">We'll confirm your placement and welcome your family into our community.</p>
+          <p style="color:var(--text-light);">Once your application is received, our team will contact you to confirm enrollment and welcome your family.</p>
         </div>
-      </div>
-      <div class="text-center mt-2">
-        <a href="/contact" class="btn btn-accent" style="font-size:1.05rem;">Book a Tour</a>
       </div>
     </div>
   </section>
 
   <!-- Fee Tables -->
-  <section class="section section-alt">
+  <section class="section">
     <div class="container">
-      <h2 class="section-title">Fees for 2026</h2>
+      <h2 class="section-title">Pricing &amp; Fees</h2>
+      <p class="text-center" style="color:var(--text-light);margin-top:-2rem;margin-bottom:2rem;">We believe in providing clear, all-inclusive fee structures.</p>
 
-      <!-- Claremont Fees -->
       <div style="margin-bottom:3rem;">
-        <h3 style="font-size:1.4rem;margin-bottom:1rem;color:var(--primary);">Claremont Campus</h3>
+        <h3 style="font-size:1.4rem;margin-bottom:1rem;color:var(--teal);">Claremont Fees 2026</h3>
         <div style="overflow-x:auto;">
           <table class="fee-table">
             <thead>
               <tr>
-                <th>Fee Type</th>
-                <th>Amount</th>
+                <th>Programme</th>
+                <th>Fee</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>Enrolment Fee (once-off)</td>
-                <td class="fee-amount">R3,500</td>
+                <td>Toddler (18-36 months) — Half Day (07:30-12:30)</td>
+                <td class="fee-amount">R4,190<span style="font-weight:400;color:var(--text-light);"> /month</span></td>
               </tr>
               <tr>
-                <td>Toddler (18–36 months) — Half Day</td>
-                <td class="fee-amount">R4,190 / month</td>
+                <td>Toddler (18-36 months) — Full Day (07:30-17:00)</td>
+                <td class="fee-amount">R5,270<span style="font-weight:400;color:var(--text-light);"> /month</span></td>
               </tr>
               <tr>
-                <td>Toddler (18–36 months) — Full Day</td>
-                <td class="fee-amount">R5,270 / month</td>
-              </tr>
-              <tr>
-                <td>Annual Resource Fee</td>
-                <td class="fee-amount">R1,500</td>
+                <td colspan="2" style="font-size:0.8rem;color:var(--text-light);"><strong>Annual Resource Fee:</strong> R1,500</td>
               </tr>
             </tbody>
           </table>
         </div>
-        <h4 style="margin-top:1.5rem;margin-bottom:0.5rem;">Optional Extras</h4>
+        <h4 style="margin-top:1.5rem;margin-bottom:0.5rem;font-size:1rem;">Optional Extras</h4>
         <div style="overflow-x:auto;">
           <table class="fee-table">
             <thead>
@@ -91,72 +88,62 @@ import Layout from '../layouts/Layout.astro';
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>Aftercare</td>
-                <td class="fee-amount">R90 / day</td>
-              </tr>
-              <tr>
-                <td>Lunch</td>
-                <td class="fee-amount">R550 / month</td>
-              </tr>
-              <tr>
-                <td>Holiday Club — Half Day</td>
-                <td class="fee-amount">R170 / day</td>
-              </tr>
-              <tr>
-                <td>Holiday Club — Full Day</td>
-                <td class="fee-amount">R240 / day</td>
-              </tr>
+              <tr><td>Aftercare (ad hoc, daily)</td><td class="fee-amount">R90<span style="font-weight:400;color:var(--text-light);"> /day</span></td></tr>
+              <tr><td>Lunch (monthly)</td><td class="fee-amount">R550<span style="font-weight:400;color:var(--text-light);"> /month</span></td></tr>
+              <tr><td>Holiday Club — Half Day</td><td class="fee-amount">R170<span style="font-weight:400;color:var(--text-light);"> /day</span></td></tr>
+              <tr><td>Holiday Club — Full Day</td><td class="fee-amount">R240<span style="font-weight:400;color:var(--text-light);"> /day</span></td></tr>
             </tbody>
           </table>
         </div>
       </div>
 
-      <!-- Durbanville Fees placeholder -->
+      <!-- Durbanville -->
       <div style="margin-bottom:3rem;">
-        <h3 style="font-size:1.4rem;margin-bottom:1rem;color:var(--primary);">Durbanville Campus</h3>
-        <p style="color:var(--text-secondary);">Please contact the Durbanville campus directly for the latest fee schedule.</p>
-        <a href="/contact#durbanville" class="btn btn-outline" style="margin-top:0.5rem;display:inline-block;">Contact Durbanville</a>
+        <h3 style="font-size:1.4rem;margin-bottom:1rem;color:var(--teal);">Durbanville Campus</h3>
+        <p style="color:var(--text-light);">Please contact the Durbanville campus directly for the latest fee schedule.</p>
+        <a href="/contact#durbanville" class="btn btn-teal" style="margin-top:0.5rem;display:inline-block;">Contact Durbanville</a>
       </div>
 
-      <!-- Melkbos Fees placeholder -->
+      <!-- Melkbos -->
       <div>
-        <h3 style="font-size:1.4rem;margin-bottom:1rem;color:var(--primary);">Melkbos Campus</h3>
-        <p style="color:var(--text-secondary);">Please contact the Melkbos campus directly for the latest fee schedule.</p>
-        <a href="/contact#melkbos" class="btn btn-outline" style="margin-top:0.5rem;display:inline-block;">Contact Melkbos</a>
+        <h3 style="font-size:1.4rem;margin-bottom:1rem;color:var(--teal);">Melkbos Campus</h3>
+        <p style="color:var(--text-light);">Please contact the Melkbos campus directly for the latest fee schedule.</p>
+        <a href="/contact#melkbos" class="btn btn-teal" style="margin-top:0.5rem;display:inline-block;">Contact Melkbos</a>
       </div>
     </div>
   </section>
 
   <!-- Enrollment Form -->
-  <section class="section">
+  <section class="section section-alt">
     <div class="container">
       <div style="max-width:700px;margin:0 auto;">
-        <h2 class="section-title">Online Enrollment</h2>
-        <p style="text-align:center;color:var(--text-secondary);margin-bottom:2rem;">Complete the form below to begin your child's journey at Lily House Montessori.</p>
-        <form action="#" method="POST" style="background:var(--card-bg);padding:2rem;border-radius:var(--radius);">
+        <h2 class="section-title">Enroll Now</h2>
+        <p style="text-align:center;color:var(--text-light);margin-bottom:2rem;">
+          Please complete the form below to begin the enrollment process. A copy will be automatically routed to our admissions team for review.
+        </p>
+        <form action="#" method="POST" style="background:var(--white);padding:2rem;border-radius:var(--radius);">
           <div class="form-group">
-            <label for="parent-name">Parent / Guardian Name *</label>
+            <label for="parent-name">Parent's Full Name <span style="color:red;">*</span></label>
             <input type="text" id="parent-name" name="parent-name" required />
           </div>
           <div class="form-group">
-            <label for="child-name">Child's Full Name *</label>
+            <label for="child-name">Child's Full Name <span style="color:red;">*</span></label>
             <input type="text" id="child-name" name="child-name" required />
           </div>
           <div class="form-group">
-            <label for="email">Email Address *</label>
+            <label for="email">Parent's Email <span style="color:red;">*</span></label>
             <input type="email" id="email" name="email" required />
           </div>
           <div class="form-group">
-            <label for="phone">Phone Number *</label>
+            <label for="phone">Parent's Number <span style="color:red;">*</span></label>
             <input type="tel" id="phone" name="phone" required />
           </div>
           <div class="form-group">
-            <label for="dob">Child's Date of Birth *</label>
+            <label for="dob">Child's Date of Birth <span style="color:red;">*</span></label>
             <input type="date" id="dob" name="dob" required />
           </div>
           <div class="form-group">
-            <label>Preferred Campus *</label>
+            <label>Choose Your Campus <span style="color:red;">*</span></label>
             <div class="radio-group">
               <label><input type="radio" name="campus" value="claremont" required /> Claremont</label>
               <label><input type="radio" name="campus" value="durbanville" /> Durbanville</label>
@@ -164,16 +151,16 @@ import Layout from '../layouts/Layout.astro';
             </div>
           </div>
           <div class="form-group">
-            <label for="start-date">Preferred Start Date *</label>
-            <input type="date" id="start-date" name="start-date" required />
+            <label for="start-date">Preferred Start Date</label>
+            <input type="date" id="start-date" name="start-date" />
           </div>
           <div class="form-group">
-            <label for="questions">Questions or Comments</label>
-            <textarea id="questions" name="questions" rows="4" placeholder="Any additional information we should know..."></textarea>
+            <label for="questions">Any Questions or Comments?</label>
+            <textarea id="questions" name="questions" rows="4"></textarea>
           </div>
-          <button type="submit" class="btn btn-accent" style="width:100%;font-size:1.05rem;padding:0.9rem;">Submit Enrollment Request</button>
+          <button type="submit" class="btn btn-green" style="width:100%;font-size:1.05rem;padding:0.9rem;">Send</button>
         </form>
-        <p style="text-align:center;font-size:0.85rem;color:var(--text-secondary);margin-top:1rem;">
+        <p style="text-align:center;font-size:0.85rem;color:var(--text-light);margin-top:1rem;">
           By submitting this form you agree to our privacy policy. We will contact you within 2 business days.
         </p>
       </div>

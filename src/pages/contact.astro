@@ -4,15 +4,8 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title="Contact — Lily House Montessori Schools" description="Get in touch with Lily House Montessori Schools. Find our Claremont, Durbanville, and Melkbos campuses, and book a tour.">
   <!-- Hero -->
-  <section class="hero">
-    <img
-      class="hero-bg"
-      src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&q=75"
-      alt="Contact Lily House Montessori"
-      loading="eager"
-    />
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
+  <section class="page-hero">
+    <div class="container">
       <h1>Contact Us</h1>
       <p class="subtitle">We'd love to hear from you</p>
     </div>
@@ -86,7 +79,7 @@ import Layout from '../layouts/Layout.astro';
     <div class="container">
       <div style="max-width:600px;margin:0 auto;">
         <h2 class="section-title">Send Us a Message</h2>
-        <p style="text-align:center;color:var(--text-secondary);margin-bottom:2rem;">
+        <p style="text-align:center;color:var(--text-light);margin-bottom:2rem;">
           Have a question? We'd love to hear from you. Fill out the form and we'll get back to you soon.
         </p>
         <form action="#" method="POST" style="background:var(--white);padding:2rem;border-radius:var(--radius);">
@@ -102,7 +95,7 @@ import Layout from '../layouts/Layout.astro';
             <label for="contact-message">Message *</label>
             <textarea id="contact-message" name="message" rows="5" required></textarea>
           </div>
-          <button type="submit" class="btn btn-primary" style="width:100%;font-size:1.05rem;padding:0.9rem;">Send Message</button>
+          <button type="submit" class="btn btn-teal" style="width:100%;font-size:1.05rem;padding:0.9rem;">Send Message</button>
         </form>
       </div>
     </div>

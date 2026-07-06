@@ -19,27 +19,30 @@ import Layout from '../layouts/Layout.astro';
     <div class="container">
       <h2 class="section-title">Find Your Campus</h2>
       <div class="campus-grid">
-        <a href="/campuses/claremont" class="campus-card-link">
+        <div class="campus-card-link">
           <img src="https://i0.wp.com/lilyhouseschool.co.za/wp-content/uploads/2025/11/Jaxon_B_Candid-1.jpg?fit=800%2C534&ssl=1" alt="Claremont classroom" loading="lazy" />
           <div class="campus-card-body">
             <h3>Lily House Claremont</h3>
-            <p>Small class sizes and personalised attention in the heart of the leafy Southern Suburbs.</p>
+            <div class="yt-placeholder"><div class="play-btn">▶</div></div>
+            <a href="/contact" class="btn btn-green" style="width:100%;">Contact Us</a>
           </div>
-        </a>
-        <a href="/campuses/durbanville" class="campus-card-link">
+        </div>
+        <div class="campus-card-link">
           <img src="https://i0.wp.com/lilyhouseschool.co.za/wp-content/uploads/2025/02/Lily-House-52-scaled.jpg?fit=800%2C534&ssl=1" alt="Durbanville classroom" loading="lazy" />
           <div class="campus-card-body">
             <h3>Lily House Durbanville</h3>
-            <p>Our Durbanville campus offers a unique learning experience, where education blossoms amidst the rolling vineyards and orchards of the valley.</p>
+            <div class="yt-placeholder"><div class="play-btn">▶</div></div>
+            <a href="/contact" class="btn btn-green" style="width:100%;">Contact Us</a>
           </div>
-        </a>
-        <a href="/campuses/melkbos" class="campus-card-link">
+        </div>
+        <div class="campus-card-link">
           <img src="https://i0.wp.com/lilyhouseschool.co.za/wp-content/uploads/2025/11/Lily-House-14.jpg?fit=800%2C534&ssl=1" alt="Melkbos classroom" loading="lazy" />
           <div class="campus-card-body">
             <h3>Lily House Melkbos</h3>
-            <p>A nurturing, intimate school environment where coastal charm meets Montessori excellence on the West Coast.</p>
+            <div class="yt-placeholder"><div class="play-btn">▶</div></div>
+            <a href="/contact" class="btn btn-green" style="width:100%;">Contact Us</a>
           </div>
-        </a>
+        </div>
       </div>
     </div>
   </section>
@@ -96,6 +99,14 @@ import Layout from '../layouts/Layout.astro';
   .campus-card-body { padding:1.25rem; }
   .campus-card-body h3 { font-size:1.15rem; font-weight:700; margin-bottom:0.5rem; color:var(--teal); }
   .campus-card-body p { font-size:0.9rem; color:var(--text-light); line-height:1.6; }
+  .campus-card-body .btn { margin-top:0.5rem; }
+
+  .yt-placeholder {
+    background: #e5e7eb; aspect-ratio: 16/9; display: flex;
+    align-items: center; justify-content: center; margin: 0.75rem 0;
+    border-radius: 0.5rem;
+  }
+  .play-btn { font-size: 2.5rem; color: #9ca3af; }
 
   .blog-grid { display:grid; grid-template-columns:1fr; gap:2rem; }
   @media (min-width:768px) { .blog-grid { grid-template-columns:repeat(2,1fr); } }

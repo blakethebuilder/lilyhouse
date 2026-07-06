@@ -44,6 +44,41 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">A Foundation for Lifelong Learning</h2>
+      <p class="text-center" style="color:var(--text-light);margin-bottom:2rem;max-width:800px;margin-left:auto;margin-right:auto;line-height:1.7;">At Lily House, we are dedicated to providing a solid foundation for your child's education. Our Montessori curriculum nurtures curiosity, builds independence, and empowers children to become confident, capable learners. We prepare them for their next educational step and beyond.</p>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">Nurturing Young Minds</h2>
+      <p class="text-center" style="color:var(--text-light);margin-bottom:2.5rem;max-width:700px;margin-left:auto;margin-right:auto;">Our approach celebrates each child's innate desire to learn through hands-on exploration and self-directed activities.</p>
+      <div class="philosophy-grid">
+        <div class="pillar-card fade-in">
+          <h3 style="color:var(--teal);margin-bottom:0.5rem;">Hands-On Learning</h3>
+          <p style="color:var(--text-light);">Children engage with specially designed Montessori materials, fostering deep understanding and cognitive growth.</p>
+        </div>
+        <div class="pillar-card fade-in">
+          <h3 style="color:var(--teal);margin-bottom:0.5rem;">Individualised Progress</h3>
+          <p style="color:var(--text-light);">We tailor our teaching to each child's unique pace and learning style, ensuring they thrive at every stage of development.</p>
+        </div>
+        <div class="pillar-card fade-in">
+          <h3 style="color:var(--teal);margin-bottom:0.5rem;">Practical Life Skills</h3>
+          <p style="color:var(--text-light);">Children develop essential skills like concentration, coordination, and orderliness, building a strong foundation for future success.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Academic Excellence</h2>
+      <p class="text-center" style="color:var(--text-light);margin-bottom:2rem;max-width:800px;margin-left:auto;margin-right:auto;line-height:1.7;">We seamlessly integrate Montessori principles with standard academic requirements. Whether in our Preschool or Primary phase, we emphasise language development and foundational numeracy skills. Our curriculum broadens children's understanding of the world through history, geography, and culture, ensuring they are fully prepared for any academic path they choose.</p>
+    </div>
+  </section>
+
   <section class="section section-alt">
     <div class="container">
       <h2 class="section-title">From the Lily House Community</h2>
@@ -102,4 +137,7 @@ import Layout from '../layouts/Layout.astro';
 
   .blog-grid { display:grid; grid-template-columns:1fr; gap:2rem; }
   @media (min-width:768px) { .blog-grid { grid-template-columns:repeat(2,1fr); } }
+
+  .philosophy-grid { display:grid; grid-template-columns:1fr; gap:1.5rem; }
+  @media (min-width:768px) { .philosophy-grid { grid-template-columns:repeat(3,1fr); } }
 </style>

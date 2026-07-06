@@ -70,8 +70,8 @@ const {
       display: flex; align-items: center; justify-content: space-between;
       padding: 0.7rem 1.5rem; max-width: 1200px; margin: 0 auto;
     }
-    .header-logo { display: flex; align-items: center; gap: 0.4rem; text-decoration: none; flex-shrink: 0; }
-    .header-logo img { width: 36px; height: auto; }
+    .header-logo { display: flex; align-items: center; text-decoration: none; flex-shrink: 0; }
+    .header-logo img { width: 56px; height: auto; }
     .header-logo span { font-weight: 800; font-size: 1.05rem; color: var(--teal); }
 
     .nav { display: flex; align-items: center; gap: 0.1rem; }
@@ -418,8 +418,7 @@ const {
   <header class="header">
     <div class="header-inner">
       <a href="/" class="header-logo">
-        <img src="/assets/lilyhouse-logo.png" alt="Lily House" width="36" height="26" />
-        <span>Lily House</span>
+        <img src="/assets/lilyhouse-logo.png" alt="Lily House" width="56" height="40" />
       </a>
       <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
       <nav class="nav" id="mainNav">
@@ -443,6 +442,9 @@ const {
   <main><slot /></main>
 
   <footer class="footer">
+    <div style="text-align:center;margin-bottom:1.5rem;">
+      <img src="https://lilyhouseschool.co.za/wp-content/uploads/2022/01/Lily-House-Logo.svg" alt="Lily House" height="60" />
+    </div>
     <div class="footer-grid">
       <div>
         <h3>Contact</h3>
